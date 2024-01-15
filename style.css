@@ -132,20 +132,6 @@ main {
     font-weight: bolder;
 }
 
-.character-info p {
-    color: var(--gray-400);
-}
-
-/* .loader {
-    border: 6px solid rgba(0, 0, 0, 0.1);
-    border-top: 6px solid #3498db;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    animation: spin 1s linear infinite;
-    margin: 50px auto;
-} */
-
 #pages-container {
     display: flex;
     justify-content: center;
@@ -161,16 +147,12 @@ main {
 }
 
 #pages-container button:hover {
-    border-bottom: 2px solid #44281d;
+    text-shadow: 0px 0px 1px #0B8843;
 }
 
 #pages {
     display: flex;
     gap: 0.875rem;
-}
-
-.current-page {
-    border-bottom: var(--blue-primary) solid 2px;
 }
 
 #portal {
@@ -188,7 +170,7 @@ footer {
 }
 
 #api-info {
-    width: 450px;
+    width: 500px;
     background-color: transparent;
     display: flex;
     justify-content: space-between;
