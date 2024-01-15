@@ -71,11 +71,11 @@ async function buildCard() {
               <h3>${getStatus(character)} - ${character.species}</h3>
             </div>
             <div>
-              <p>Última localização conhecida:</p>
+              <p style="color:#B2B2B2">Última localização conhecida:</p>
               <h3>${character.location.name}</h3>
             </div>
             <div>
-              <p>Visto a última vez em:</p>
+              <p style="color:#B2B2B2">Visto a última vez em:</p>
               <h3>${episodeName}</h3>
             </div>
           </div>
@@ -89,12 +89,12 @@ async function buildCard() {
 
 function getStatus(cards) {
     if (cards.status == "Alive") {
-        return `<span><b> <span style="color: #00FF00; font-size:2rem;"">•</span> Vivo</b></span>`;
+        return `<span><b> <span style="color: #00FF00; font-size:1.4rem;">●</span> Vivo</b></span>`;
     }
     if (cards.status == "Dead") {
-        return `<h2 style="color: #FF0000;">• Morto</h2>`;
+        return `<span><b> <span style="color: #FF0000; font-size:1.4rem;">●</span> Morto</b></span>`;
     } else {
-        return `<h2 style="color: #757575;">• Desconhecido</h2>`;
+        return `<span><b> <span style="color: #757575; font-size:1.4rem;">●</span> Desconhecido</b></span>`;
     }
 }
 
