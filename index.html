@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick & Morty</title>
+    <link rel="shortcut icon" href="./images/rick-and-morty-portal.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <img id="logo" src="./images/RICK_MORTY_ICON -aw.png" alt="Rick & Morty icon">
+    <header>
+        <img id="fundo" src="./images/fundo.png" alt="rick e morty fundo">
+        <h1>API de Rick and Morty</h1>
+        <div id="input">
+            <input id="search" type="text" placeholder="pesquisar">
+            <img id="lupa" src="./images/lupa - g.png" alt="Lupa de busca">
+        </div>
+    </header>
+
+    <main>
+        <section id="characters-container"></section>
+        <section id="pages-container">
+            <button id="anterior">Anterior</button>
+            <span id="pages"> </span>
+            <button id="proxima">Próxima</button>
+        </section>
+        <img id="portal" src="./images/rick-and-morty-portal.png" alt="Rick & Morty saindo de um portal">
+    </main>
+
+    <footer>
+        <section id="api-info">
+            <p>PERSONAGENS: <span id="personagens">0</span></p>
+            <p>LOCALIZAÇÕES: <span id="localizacoes">0</span></p>
+            <p>EPISÓDIOS: <span id="episodios">0</span></p>
+        </section>
+        <section id="dev-info">
+            <p>Desenvolvido por: <strong>Daniel Gheno</strong> em 2024</p>
+        </section>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
