@@ -71,11 +71,11 @@ async function buildCard() {
               <h3>${getStatus(character)} - ${character.species}</h3>
             </div>
             <div>
-              <p style="color:#B2B2B2">Última localização conhecida:</p>
+              <p style="color:#C0C0B0">Última localização conhecida:</p>
               <h3>${character.location.name}</h3>
             </div>
             <div>
-              <p style="color:#B2B2B2">Visto a última vez em:</p>
+              <p style="color:#C0C0B0">Visto a última vez em:</p>
               <h3>${episodeName}</h3>
             </div>
           </div>
