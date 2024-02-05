@@ -36,12 +36,12 @@
     }
 }
 
-@keyframes placeholderAnimation {
-    from {
-        width: 100%;
+@keyframes expandModal {
+    0% {
+        transform: scale(95%);
     }
-    to {
-        width: 0;
+    100% {
+        transform: scale(105%);
     }
 }
 
@@ -61,8 +61,8 @@ header h1 {
     animation: titleAnimation 2s cubic-bezier(0.5, 0.82, 0.165, 1) infinite alternate;
 }
 
-#search::placeholder {
-    animation: placeholderAnimation 2s ease infinite alternate;
+.modal-body {
+    animation: expandModal 2s ease-in-out infinite alternate;
 }
 
 .w-100 {
