@@ -1,0 +1,70 @@
+.card:hover{
+    transform: translateY(-3%);
+}
+
+#pages-container button:hover {
+    color: #00ff00;
+}
+
+.modal-content {
+    background-color: #000000;
+    color: #00ff00;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.custom-close-button {
+    background: none;
+    border: none;
+    padding: 0;
+    color: #00ff00;
+}
+
+.custom-close-button img {
+    width: 20px;
+    height: auto;
+}
+
+@keyframes titleAnimation {
+    0% {
+        color: #007635;
+    }
+    100% {
+        color: #00ff00;
+    }
+}
+
+@keyframes placeholderAnimation {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0;
+    }
+}
+
+@keyframes imageMovement {
+    0% {
+        transform: translateX(-3%);
+    }
+    50% {
+        transform: translateX(3%);
+    }
+    100% {
+        transform: translateX(-3%);
+    }
+}
+
+header h1 {
+    animation: titleAnimation 2s cubic-bezier(0.5, 0.82, 0.165, 1) infinite alternate;
+}
+
+#search::placeholder {
+    animation: placeholderAnimation 2s ease infinite alternate;
+}
+
+.w-100 {
+    animation: imageMovement 4s ease-in-out infinite alternate;
+}

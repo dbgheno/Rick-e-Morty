@@ -5,32 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rick & Morty</title>
-    <link rel="shortcut icon" href="./images/rick-and-morty-portal.png" type="image/x-icon">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./images/RICK_MORTY_ICON-green.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animation-modal.css">
 </head>
 
-<body>
-
-    <header>
-        <img id="logo" src="./images/RICK_MORTY_ICON -aw.png" alt="Rick & Morty icon">
-        <div class="header-container">
+<body class="container-fluid vw-100 bg-black">
+    <header class="bg-black">
+        <a href="./index.html"><img id="logo" src="./images/RICK_MORTY_ICON-green.png" alt="Rick & Morty icon"></a>
+        <div class="d-flex flex-column align-items-center justify-content-center" style="transform: translateY(25%);">
             <h1>API de Rick and Morty</h1>
             <div id="input">
                 <input id="search" type="text" placeholder="pesquisar" autocomplete="off">
-                <img id="lupa" src="./images/lupa - g.png" alt="Lupa de busca">
+                <img id="lupa" src="./images/lupa-green.png" alt="Lupa de busca">
             </div>
         </div>
     </header>
 
-    <main>
-        <section id="characters-container"></section>
+    <main class="container">
+        <section id="characters-container" class="row justify-content-center"></section>
         <section id="pages-container">
             <button id="anterior">Anterior</button>
             <span id="pages"> </span>
             <button id="proxima">Próxima</button>
         </section>
-        <img id="portal" src="./images/rick-and-morty-portal.png" alt="Rick & Morty saindo de um portal">
+        <img class="w-100" src="./images/rm-bg.png">
     </main>
+
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <button type="button" class="custom-close-button" data-bs-dismiss="modal" aria-label="Close">
+                        <img src="./images/x-close.png" alt="Close icon">
+                    </button>
+                </div>
+                <div class="modal-body text-center"></div>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <section id="api-info">
@@ -45,6 +61,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -62,30 +62,50 @@ async function buildCard() {
         index++;
         const episodeName = await getEpisodeName(character.episode[character.episode.length - 1]);
 
-        document.getElementById("characters-container").innerHTML += `
-        <article class="card">
-          <img class="character-image" src="${character.image}" alt="Character image">
-          <div class="character-info">
-            <div>
-              <h2>${character.name}</h2>
-              <h3>${getStatus(character)} - ${character.species}</h3>
+        const article = document.createElement('article');
+        article.classList.add('card');
+        article.innerHTML = `
+            <img class="character-image" src="${character.image}" alt="Character image">
+            <div class="character-info">
+                <div>
+                    <h2>${character.name}</h2>
+                    <h3>${getStatus(character)} - ${character.species}</h3>
+                </div>
+                <div>
+                    <p style="color:#C0C0B0">Última localização conhecida:</p>
+                    <h3>${character.location.name}</h3>
+                </div>
+                <div>
+                    <p style="color:#C0C0B0">Visto a última vez em:</p>
+                    <h3>${episodeName}</h3>
+                </div>
             </div>
-            <div>
-              <p style="color:#C0C0B0">Última localização conhecida:</p>
-              <h3>${character.location.name}</h3>
-            </div>
-            <div>
-              <p style="color:#C0C0B0">Visto a última vez em:</p>
-              <h3>${episodeName}</h3>
-            </div>
-          </div>
-        </article>`;
-
-        if (index % 2 === 0 && index !== cards.length) {
-            document.getElementById("characters-container").innerHTML += `<div class="horizontal-line"></div>`;
-        }
+        `;
+        
+        article.addEventListener('click', function () {
+            function buildModalContent(character) {
+                return `
+                    <img class="modal-character-image" src="${character.image}" alt="${character.name}">
+                    <h2>${character.name}</h2>
+                    <h3>${getStatus(character)} - ${character.species}</h3>
+                    <p>Última localização conhecida:</p>
+                    <h3>${character.location.name}</h3>
+                    <p>Visto a última vez em:</p>
+                    <h3>${episodeName}</h3>
+                `;
+            }
+                        const modalBody = document.querySelector('.modal-body');
+            modalBody.innerHTML = buildModalContent(character);
+        
+            var myModal = new bootstrap.Modal(document.getElementById('myModal'));
+            myModal.show();
+        });
+        
+        document.getElementById("characters-container").appendChild(article);
     }
 }
+
+
 
 function getStatus(cards) {
     if (cards.status == "Alive") {
